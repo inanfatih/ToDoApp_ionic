@@ -15,8 +15,13 @@
 
 <ion-content padding>
 <ion-list>
+
   <ion-item-sliding *ngFor="let todo of todos">
-      <ion-item>{{todo}}</ion-item>
+      <ion-item>{{todo}}
+          <h3>Date will come here</h3>
+          <button ion-button clear item-end>View</button>
+        </ion-item>
+
 
       <ion-item-options side="right">
         <button color="danger" ion-button>

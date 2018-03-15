@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {Http} from '@angular/http'
 
 /*
   Generated class for the TodoProvider provider.
@@ -10,8 +11,19 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TodoProvider {
 
-  constructor(public http: HttpClient) {
+  private todos = [];
+
+  constructor(public http: Http) {
     console.log('Hello TodoProvider Provider');
   }
+
+  getTodos(){
+    return this.todos;
+  }
+
+  addTodo(todo){
+    this.todos.push(todo);
+  }
+
 
 }
