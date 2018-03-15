@@ -4,7 +4,7 @@
       To Do List
     </ion-title>
     <ion-buttons end>
-      <button ion-button (click)="openTodoAlert()">
+      <button ion-button (click)= "goToCreation()">
         <ion-icon name="add">
 
         </ion-icon>
@@ -19,7 +19,7 @@
   <ion-item-sliding *ngFor="let todo of todos; let todoIndex = index">
       <ion-item>{{todo}}
           <h3>Date will come here</h3>
-          <button ion-button clear item-end>View</button>
+          <button ion-button clear item-end>Edit</button>
         </ion-item>
 
 
@@ -29,6 +29,7 @@
           </ion-icon>
         </button>
 
+        
       </ion-item-options>
 
     </ion-item-sliding>

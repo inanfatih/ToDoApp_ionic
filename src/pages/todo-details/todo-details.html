@@ -7,12 +7,29 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>TodoDetailsPage</ion-title>
+    <ion-title>Details of Todo</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-item>
+        <ion-label color="primary" stacked>Task Title</ion-label>
+        <ion-input type="text" placeholder="Title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label color="primary" stacked>Task Details</ion-label>
+          <ion-input type="text" placeholder="Details"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label  color="primary" stacked>Due Date</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+          </ion-item>
+
+          <button ion-button full>Create</button>
+
 
 </ion-content>

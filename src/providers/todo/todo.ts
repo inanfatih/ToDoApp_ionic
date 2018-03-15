@@ -32,9 +32,16 @@ export class TodoProvider {
     return this.archivedTodos;
   }
 
+  createTodo(todo){
+    this.todos.push(todo);
+  }
+
   addTodo(todo){
     this.todos.push(todo);
   }
 
+  editTodo(todo, todoIndex){
+    this.todos[todoIndex] = todo;
+  }
 
 }
