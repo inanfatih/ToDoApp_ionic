@@ -10,8 +10,7 @@ export class HomePage {
   public todoDetails = [];
   public todoDates = [];
   constructor(public navCtrl: NavController, private alertController: AlertController) {
-
-  }
+}
 
   openTodoAlert(){
     let addTodoAlert = this.alertController.create({
