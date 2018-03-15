@@ -1,3 +1,5 @@
+import { TodoDetailsPage } from './../pages/todo-details/todo-details';
+import { ArchievedTodosPage } from './../pages/archieved-todos/archieved-todos';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -9,10 +11,13 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TodoProvider } from '../providers/todo/todo';
 
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ArchievedTodosPage,
+    TodoDetailsPage
   ],
   imports: [
     HttpModule,
@@ -22,7 +27,9 @@ import { TodoProvider } from '../providers/todo/todo';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ArchievedTodosPage,
+    TodoDetailsPage
   ],
   providers: [
     StatusBar,

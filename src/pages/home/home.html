@@ -16,7 +16,7 @@
 <ion-content padding>
 <ion-list>
 
-  <ion-item-sliding *ngFor="let todo of todos">
+  <ion-item-sliding *ngFor="let todo of todos; let todoIndex = index">
       <ion-item>{{todo}}
           <h3>Date will come here</h3>
           <button ion-button clear item-end>View</button>
@@ -24,9 +24,8 @@
 
 
       <ion-item-options side="right">
-        <button color="danger" ion-button>
+        <button color="danger" ion-button (click)= "archiveTodo(todoIndex)" >
           <ion-icon name="trash">
-
           </ion-icon>
         </button>
 
@@ -34,4 +33,11 @@
 
     </ion-item-sliding>
 </ion-list>
+
+<ion-fab right bottom>
+  <button ion-fab [navPush]="archivedTodosPage">
+    <ion-icon name="archive"></ion-icon>
+  </button>
+</ion-fab>
+
 </ion-content>

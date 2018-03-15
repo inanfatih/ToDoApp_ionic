@@ -1,7 +1,9 @@
+import { ArchievedTodosPage } from './../archieved-todos/archieved-todos';
 import { Component } from '@angular/core';
 import { NavController,AlertController } from 'ionic-angular';
 
 import {TodoProvider} from "../../providers/todo/todo"
+
 
 @Component({
   selector: 'page-home',
@@ -11,9 +13,18 @@ export class HomePage {
   public todos = [];
   public todoDetails = [];
   public todoDates = [];
+  public archivedTodosPage = ArchievedTodosPage;
   constructor(private todoService: TodoProvider, public navCtrl: NavController, private alertController: AlertController) {
     this.todos = this.todoService.getTodos();
 }
+
+archiveTodo(todoIndex){
+  this.todoService.archiveTodo(todoIndex)
+}
+
+  // goToArchivePage(){
+  //   this.navCtrl.push(ArchievedTodosPage);
+  // }
 
   openTodoAlert(){
     let addTodoAlert = this.alertController.create({
